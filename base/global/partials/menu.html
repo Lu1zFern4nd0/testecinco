@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav flex-fill"> <!-- Use flex-fill para que os itens ocupem o espaço disponível -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'colmeia' %}">Colmeias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'cera' %}">Cera</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'bombom' %}">Bombom</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'enxame' %}">Enxames</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+document.querySelectorAll('.navbar-nav li').forEach(item => {
+    item.addEventListener('click', function(event) {
+        // Impede que o clique no item feche a cor imediatamente
+        event.stopPropagation();
+        
+        // Remover a classe "hovered" de todos os itens
+        document.querySelectorAll('.navbar-nav li').forEach(li => li.classList.remove('hovered'));
+        
+        // Adicionar a classe "hovered" ao item clicado
+        item.classList.add('hovered');
+    });
+});
+
+// Adiciona um evento para clicar em qualquer outro lugar da página
+document.body.addEventListener('click', function() {
+    // Remove a classe "hovered" de todos os itens, fechando a cor amarela
+    document.querySelectorAll('.navbar-nav li').forEach(li => li.classList.remove('hovered'));
+});
+
+</script>
