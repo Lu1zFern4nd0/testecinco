@@ -1,0 +1,64 @@
+{% extends "global/base.html" %}
+
+{% block texto %}
+
+    <div class="message">
+        <h2>Bem-vindo ao nosso site!</h2>
+        
+    </div>
+
+    <div class="video-container">
+        <div class="video">
+            <iframe width="100%" height="250" src="/static/global/img/videohome1.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="250" src="/static/global/img/videoteste.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="250" src="/static/global/img/videoteste.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="250" src="/static/global/img/videoteste.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+<div class="message">
+    <h2>Entre em contato conosco através do WhatsApp e confira nossa página no Facebook</h2>
+       
+    <div class="contact-buttons">
+        <a href="https://wa.me/5521980637549" class="contact-button whatsapp" target="_blank">
+            </i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/vida.animal.curiosa/reels/" class="contact-button facebook" target="_blank">
+            </i> Facebook
+        </a>
+    </div>
+</div>
+
+    <div class="comments-section">
+        <h2>Deixe seu comentário</h2>
+        <form method="POST" action="{% url 'gravar_comentario' %}">
+            {% csrf_token %}
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" name="nome">
+    <label for="cmt">Comentario</label>
+    <input type="text" class="form-control" name="cmt">
+    <button class="btn btn-primary mt-2 mb-2">Enviar</button>
+        </form>
+        <h2>Comentários</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Nome</th>
+                <th>Comentário</th>         
+            </tr>
+            {% for coment in comentarios %}
+            <tr>
+                <td>{{coment.nome}}</td>
+                <td>{{coment.comentario}}</td>            
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+
+{% endblock texto %}

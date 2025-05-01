@@ -1,0 +1,40 @@
+{% extends "global/base.html" %}
+{% block texto %} 
+<style>
+    .alert {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        margin: 20px;
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+    }
+    .alert-icon {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="alert">
+<span class="alert-icon">⚠️</span>
+<span id="alert-message">Informamos que a venda de enxames de abelhas é restrita ao estado do Rio de Janeiro. Essa medida é necessária porque as abelhas não devem permanecer confinadas por longos períodos, garantindo seu bem-estar e saúde. Para realizar a compra, é essencial que o interessado entre em contato conosco através do WhatsApp. Assim, poderemos discutir detalhes e agendar a entrega de forma mais eficiente. Agradecemos pela compreensão!</span>
+</div>
+
+<div class="container">
+    <img src="/static/global/img/enxamejatai.png" alt="Descrição da imagem" class="imagem">
+    <div class="texto">
+        <p>Este é o texto que será exibido ao lado da imagem. Você pode colocar o conteúdo que desejar aqui.</p>
+    </div>
+</div>
+
+<div class="container">
+    <img src="/static/global/img/enxamemandacaia.png" alt="Descrição da imagem" class="imagem">
+    <div class="texto">
+        <p>Este é o texto que será exibido ao lado da imagem. Você pode colocar o conteúdo que desejar aqui.</p>
+    </div>
+</div>
+
+{% endblock texto %}

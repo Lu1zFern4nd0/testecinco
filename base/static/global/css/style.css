@@ -1,0 +1,170 @@
+nav {
+    background-color: rgb(0, 0, 0); /* Cor de fundo do menu */
+    width: 100%; /* Ocupa toda a largura da tela */
+    padding: 0; /* Remove qualquer padding */
+    height: 10vh; /* Altura fixa do menu */
+}
+
+.navbar {
+    width: 100%; /* A navbar deve ocupar 100% da largura */
+}
+
+.navbar-nav {
+    margin: 0; /* Remove margens para que ocupe o espaço correto */
+}
+
+.navbar-nav li {
+    transition: background-color 0.3s;
+}
+
+.navbar-nav li.hovered {
+    background-color: rgb(255, 247, 0); /* Cor amarela */
+}
+
+.navbar-nav li:hover {
+    background-color: rgb(255, 247, 0); /* Cor amarela ao passar o mouse */
+}
+
+
+.navbar-nav .nav-link {
+    font-size: 30px; /* Aumenta o tamanho da letra */
+    color: rgb(255, 247, 0); /* Cor do texto padrão */
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(255, 247, 0); /* Mantém a cor branca para o link ativo */
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(2, 2, 2); /* Cor ao passar o mouse */
+}
+
+body {
+    background-image: url('/static/global/img/fundo.jpg'); /* Caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.video {
+    width: 45%;
+    margin: 10px 0;
+}
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+.message {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.comments-section {
+   
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Texto escuro para contraste */
+}
+.comment {
+   
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.comment h4 {
+    margin: 0;
+    color: #ffcc00;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #000000;
+    color: rgb(255, 247, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+button:hover {
+    color: rgb(2, 2, 2); /* Cor ao passar o mouse */
+    background-color: rgb(255, 247, 0); /* Pode ajustar a cor de fundo se desejar */
+}
+
+/* Contêiner para os botões */
+.contact-buttons {
+    display: flex; /* Flexbox para organizar os botões lado a lado */
+    justify-content: center; /* Alinha os botões no centro */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+/* Estilo para os botões */
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px; /* Tamanho do botão */
+    font-size: 20px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito no texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 30px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+
+/* Estilo específico para o botão WhatsApp */
+.contact-button.whatsapp {
+    background-color: #25d366; /* Cor verde do WhatsApp */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo específico para o botão Facebook */
+.contact-button.facebook {
+    background-color: #3b5998; /* Cor azul do Facebook */
+    color: white; /* Cor do texto */
+}
+
+/* Efeito de hover para os botões */
+.contact-button:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Efeito de hover para o botão WhatsApp */
+.contact-button.whatsapp:hover {
+    background-color: #128c7e; /* Cor mais escura do WhatsApp ao passar o mouse */
+}
+
+/* Efeito de hover para o botão Facebook */
+.contact-button.facebook:hover {
+    background-color: #2d4373; /* Cor mais escura do Facebook ao passar o mouse */
+}
+
+/* Estilos para os ícones */
+.contact-button i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+footer{
+    background-color: #000000;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura da tela */
+    padding: 5px;
+    height: 100%;
+    margin-top: 20px; /* Ajuste o valor conforme necessário */
+    color: #ffffff;
+}
+
